@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="headerstyle.css"?> 
+<odoo>
+    <template id="website_header" inherit_id="portal.frontend_layout" name="Website Header">
+    <xpath expr="//header" position="replace">
+        <!-- <!DOCTYPE html> -->
+<html>
+    <head>
+        <title>Header menu using HTML and CSS</title>
+        <meta charset="utf-8"></meta>
+            <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"></link>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <style>
+    
+      .col {
+          text-align: center;
+      }
+      h5{
+          color:red;
+      }
+      .btn1{
+          background-color: #f42f2c;
+          border-radius: 20px;
+          padding: 3px;
+          border-color: #f42f2c;
+          color: aliceblue;
+          font-weight: 500;
+      }
+      .btn1:hover{
+          color:#f42f2c;
+          background-color: aliceblue;
+      }
+      .btn_order{
+        position: fixed;
+        bottom: 2px;
+        right: 3%;
+        z-index: 1;
+      }
+      .our_spl > h3{
+          padding: 4% 0 0 35%;
+        }
+        .our_spl > p{
+          font-size: 16px;
+          padding-left: 30%;
+        }
+
+        *{
+          padding: 0;
+          margin: 0;
+        }
+        .row ul{
+          
+          text-align: center;
+          padding-bottom: 5px;
+          position: fixed;
+          z-index: 1;
+          background-color: #d2d2e6;
+        }
+        ul{
+           list-style-type: none;
+            padding-left: 40%;
+            padding-top: 5px;
+        }
+        ul li{
+            display: inline;
+        }
+        ul li a{
+            text-decoration: none;
+            color: rgb(7, 7, 8);
+            padding: 5px 20px;
+            font-size: 12px;
+        }
+        ul li a:hover{
+            background-color: white;
+            text-decoration: none;
+            color:#f42f2c;
+            border-radius: 25px;
+        }
+        .dropdown  {
+          position: relative;
+          display: inline-block;
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #efeff6;
+          min-width: 100px;
+          /* height: 50px; */
+        }
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          /* text-decoration: none; */
+          display: block;
+        }
+        .dropdown:hover .dropdown-content {
+          display:block;
+        }
+        .map{
+          padding-top: 5%;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          color: #f42f2c;
+        }
+        .bakery_text{
+          text-algin:center; padding-top:5%;
+        }
+        .bakery_text > p{
+          font-size:small; padding:20px;
+
+        }
+        
+  </style>
+    <div class="container-fluid" style="padding-top:3px;">
+        <body>
+            <!-- <div class="header_menu">
+                <a href="/">HOME</a>
+                <a href="/">ABOUT US</a>
+                <a href="/">PRODUCTS</a>
+                <a href="/">BRANCHES</a>
+                <a href="/">CONTACT</a>
+          </div> -->
+          <div class="row">
+            <ul>
+                  <!-- <h6 class="logo">Sugu Sweets</h6> -->
+                  <li><a href="#">HOME</a></li>
+                  <li><a href="#">OUR STORY</a></li>
+                  <li><a href="#">MENU</a></li>
+                  <li><a href="#">ARTICLE</a></li>
+                  <li class="dropdown">
+                      <a href="#">SHOP</a>
+                      <div class="dropdown-content">
+                          <a href="#">Breads</a>
+                          <a href="#">Cakes</a>
+                          <a href="#">Cookie</a>
+                          <a href="#">Muffins</a>
+                          <a href="#">Pastries</a>
+                      </div>
+                  </li>
+                  <li class="dropdown">
+                      <a href="#">BRANCHES</a>
+                      <div class="dropdown-content">
+                          <a href="#">Kumbakonam</a>
+                          <a href="#">Thanjavur</a>
+                          <a href="#">Trichy</a>
+                      </div>
+                  </li>
+                  <li><a href="#">CONTACT</a></li>
+              </ul>
+          </div>
+
+          <div class="row our_spl">
+            <h3>Our popular bakery products</h3>
+            <p>Check some of our best products and feel the great passion for food</p>
+        </div>
+            <div class="container-fluid mt-3" style="padding-top:10px;">
+      
+                <div class="row">
+                  <div class="col">
+                    <h5>Ghee Sweets</h5>
+                    <small>Ghee is clarified butter, a.k.a. butter that has been simmered and strained to remove all
+                        water</small>
+                  </div>
+                  <!-- <div class="col"></div> -->
+                  <div class="col">
+                    <h5>Milk Sweets</h5>
+                    <small>Sweetened condensed milk is milk that has been reduced and sweetened with an ample amount of sugar</small>
+                  </div>
+                  <!-- <div class="col ">.col3</div> -->
+                  <div class="col">
+                    <h5>Dry Fruit Sweets</h5>
+                    <small>Dry fruit sweets are made from cashew nuts, almonds, pista. These sweets do not contain any added flavours.</small>
+                  </div>
+                  <div class="col">
+                    <h5>Sugar Free</h5>
+                    <small>Added sugars or free sugars are sugar carbohydrates added to food their consumption</small>
+                  </div>
+                </div>
+              </div>
+            <div>
+                
+              <!-- <img itemprop="image" src="../milk-sweets.jpg" width="50%" height="50" alt="image"> -->
+                  <!-- <t t-if="o.company_selection" t-set="company_logo" t-value="o.get_logo(o.company_selection)"/> -->
+<!-- <img t-if="company.logo" t-att-src="../milk-sweets.jpg" style="max-height: 45px;" -->
+     <!-- alt="Logo"/> -->
+                <!-- </img> -->
+            </div>
+              <div class="row btn_order">
+                <!-- <li class=".btn_order"> -->
+                    <button onclick="document.location='order.html'" class="btn1">ORDER ONLINE</button>
+                <!-- </li> -->
+              
+            </div>
+        </body>
+
+    </div>
+    <div class="row">
+      <div class="col map">
+        <h6>Sweet Bakery</h6>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.0298072133583!2d79.38345631402545!3d10.961120958756474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5532b3d61806f1%3A0xbef6c948a26e3646!2sKumbakonam%20Murari%20Sweets!5e0!3m2!1sen!2sin!4v1664537841504!5m2!1sen!2sin" 
+        width="600" height="450"></iframe>
+     </div>
+     <div class="col bakery_text">
+      <p>Did you know that We began 55 years ago</p>
+     <p style="padding-top:0px;">
+        Bakery was founded in 1966 by John and Jessy Smith. They baked delicious bread and cakes for the shop, with Jessy serving the customers. Later on, their son with his wife Natalia joined and began delivering bread to the neighbouring places. They had one daughter, named Melany who worked with her family after leaving school, and eventually took over the bakery.
+Today, Bakery is run by Chris, the fifth generation of bakers in the family. Chris completed advanced training at City College, and is accompanied by a mighty team of passionate bakers, who all have a full range of skills in break making, pastry and confectionary.
+Bakery was founded in 1966 by John and Jessy Smith. They baked delicious bread and cakes for the shop, with Jessy serving the customers. Later on, their son with his wife Natalia joined and began delivering bread to the neighbouring places. They had one daughter, named Melany who worked with her family after leaving school, and eventually took over the bakery.
+Today, Bakery is run by Chris, the fifth generation of bakers in the family. Chris completed advanced training at City College, and is accompanied by a mighty team of passionate bakers, who all have a full range of skills in break making, pastry and confectionary.
+
+</p>
+</div>
+    </div>
+</html>
+
+    </xpath>
+</template>
+
+</odoo>
